@@ -16,7 +16,7 @@ spec:
       containers:
       - name: spring-boot
         image: registry.prashanthgr.private:5000/spring-boot-app:v1.0.0
-  replicas: 1
+  replicas: 6
   selector:
     matchLabels:
       app: spring-boot-app
