@@ -38,6 +38,15 @@ pipeline {
         sh 'cd spring_boot-app/spring-boot-app && sudo docker build -t ${dockerimagename} .'
       }
     }
+    stage('Pushing image to Docker registry'){
+      steps{
+        sh '''
+          sudo docker tag $dockerimagename  $dockerimagename
+          sudo docker push $dockerimagename
+        '''
+      }
+    }
+
 
   }
 
