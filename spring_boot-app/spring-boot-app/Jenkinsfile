@@ -4,9 +4,7 @@ pipeline {
 		dockerImage = ""
 		image = "spring-boot-app"
 		TAG_1 = "${IMG_TAG}"
-		
-
-    SONAR_URL = "http://192.168.1.118:9000" 
+    		SONAR_URL = "http://192.168.1.118:9000" 
 		SSH_ARG="-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -q"
 	}
   agent any
